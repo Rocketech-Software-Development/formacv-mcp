@@ -1,0 +1,61 @@
+{
+  "name": "@formacv/mcp",
+  "version": "0.1.0",
+  "description": "Official Model Context Protocol (MCP) server for FormaCV — drive AI-powered CV formatting, anonymization, AI tailoring, and ATS push-back from Claude Desktop, Cursor, and your own AI agents.",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "cv-formatting",
+    "resume",
+    "recruitment",
+    "ats",
+    "bullhorn",
+    "jobadder",
+    "vincere",
+    "claude",
+    "cursor",
+    "ai-recruiting",
+    "anonymization",
+    "formacv"
+  ],
+  "homepage": "https://formacv.ai/mcp",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rocketech-Software-Development/formacv-mcp.git"
+  },
+  "bugs": "https://github.com/Rocketech-Software-Development/formacv-mcp/issues",
+  "author": "FormaCV <hello@formacv.ai>",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "bin": {
+    "formacv-mcp": "./dist/index.js"
+  },
+  "files": ["dist", "README.md", "LICENSE", "examples"],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --dts --clean --shims",
+    "dev": "tsup src/index.ts --format esm --watch",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src/",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run typecheck && npm run lint && npm run test && npm run build"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "eslint": "^9.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.5.0",
+    "vitest": "^2.0.0"
+  }
+}
