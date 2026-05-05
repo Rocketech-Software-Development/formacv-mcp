@@ -1,0 +1,13 @@
+{
+  "servers": {
+    "formacv": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@formacv/mcp"],
+      "env": {
+        "FORMACV_API_KEY": "demo",
+        "FORMACV_SERVER_URL": "https://demo.formacv.ai"
+      }
+    }
+  }
+}
