@@ -1,6 +1,6 @@
 {
   "name": "@formacv/mcp",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "mcpName": "io.github.Rocketech-Software-Development/formacv",
   "description": "Official Model Context Protocol (MCP) server for FormaCV — drive AI-powered CV formatting, anonymization, AI tailoring, and ATS push-back from Claude Desktop, Cursor, and your own AI agents.",
   "keywords": [
